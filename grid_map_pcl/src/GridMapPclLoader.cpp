@@ -165,7 +165,7 @@ void GridMapPclLoader::processGridMapCell(
     params_->get().gridMap_.minCloudPointsPerCell_;
   if (isTooFewPointsInCell) {
     rclcpp::Clock clock;
-    RCLCPP_WARN_STREAM_THROTTLE(
+    RCLCPP_DEBUG_STREAM_THROTTLE(
       node_logger_, clock,
       10.0, "Less than " << params_->get().gridMap_.minCloudPointsPerCell_ << " points in a cell");
     return;
@@ -184,7 +184,7 @@ double GridMapPclLoader::calculateElevationFromPointsInsideGridMapCell(
   const bool isNoClustersFound = clusterClouds.empty();
   if (isNoClustersFound) {
     rclcpp::Clock clock;
-    RCLCPP_WARN_STREAM_THROTTLE(
+    RCLCPP_DEBUG_STREAM_THROTTLE(
       node_logger_, clock, 10.0, "No clusters found in the grid map cell");
     return std::nan("1");  // this will leave the grid map cell uninitialized
   }
