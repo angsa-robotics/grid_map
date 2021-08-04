@@ -5,7 +5,8 @@
  *      Author: Peter Fankhauser, Martin Wermelinger
  *   Institute: ETH Zurich, ANYbotics
  */
-
+#pragma GCC diagnostic ignored "-Wunused-parameter"
+#pragma GCC diagnostic ignored "-Wunused-but-set-variable"
 #include <pluginlib/class_list_macros.hpp>
 #include <Eigen/Dense>
 

@@ -5,7 +5,7 @@
  *      Author: Edo Jelavic
  *      Institute: ETH Zurich, Robotic Systems Lab
  */
-
+#pragma GCC diagnostic ignored "-Wmaybe-uninitialized"
 #include <ament_index_cpp/get_package_share_directory.hpp>
 
 #include <pcl/common/common.h>
